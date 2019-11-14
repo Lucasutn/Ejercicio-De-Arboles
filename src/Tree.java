@@ -63,7 +63,40 @@ public class Tree {
         this.root = root;
     }
 
+    public void showNodes(Nodo nodo) {
+
+
+        if (nodo != null) {
+
+            System.out.println(nodo);
+            showNodesRecursive(nodo.left, nodo.right);
+        }
+
+        return;
+
+
+    }
+
+    public void showNodesRecursive(Nodo leftNodo, Nodo rigthNodo) {
+
+
+        if (leftNodo != null) {
+
+            showNodes(leftNodo);
+
+        }
+        if (rigthNodo != null) {
+
+            showNodes(rigthNodo);
+
+        }
+
+        return;
+    }
+
+
     @Override
+
     public String toString() {
         return "Tree{" +
                 "root=" + root.getNum() +

@@ -13,17 +13,18 @@ public class Main {
     tree.addNodo(9);
     tree.addNodo(11);
 
+//        Verificacion ejercicio 1
+//        System.out.println(tree);
+//        System.out.println(tree.getRoot().left);
+//        System.out.println(tree.getRoot().left.left);
+//        System.out.println(tree.getRoot().left.right);
+//        System.out.println(tree.getRoot().right);
+//        System.out.println(tree.getRoot().right.right);
+//        System.out.println(tree.getRoot().right.right.left);
+//        System.out.println(tree.getRoot().right.right.right);
 
-        System.out.println(tree.getRoot().left);
-        System.out.println(tree.getRoot().left.left);
-        System.out.println(tree.getRoot().left.right);
-        System.out.println(tree.getRoot().right);
-        System.out.println(tree.getRoot().right.right);
-        System.out.println(tree.getRoot().right.right.left);
-        System.out.println(tree.getRoot().right.right.right);
 
-
-
+    tree.showNodes(tree.getRoot());
 
 
 
