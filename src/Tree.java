@@ -3,26 +3,70 @@ public class Tree {
     Nodo root;
 
 
+    public Tree() {
+    }
+
     public Tree(int num) {
-        this.root.setNum(num);
+        this.root = new Nodo(num);
     }
 
 
-    public void addNodo(int num){
+    public void addNodo(int num) {
 
         Nodo nodo = new Nodo(num);
 
-        addNodoRecursivo(root,nodo);
+        if (root == null) {
+            root = nodo;
+        }
+
+        addNodoRecursivo(root, nodo);
 
     }
 
 
-    public void addNodoRecursivo(Nodo nodoRaiz, Nodo addNodo){
+    private void addNodoRecursivo(Nodo nodoRaiz, Nodo addNodo) {
 
 
-        if(nodoRaiz.getNum()>addNodo.getNum()){
+        if (nodoRaiz.getNum() > addNodo.getNum()) {
 
-            
+            if (nodoRaiz.left != null) {
+
+                addNodoRecursivo(nodoRaiz.left, addNodo);
+            } else {
+
+                nodoRaiz.left = addNodo;
+                return;
+            }
+
+
+        } else if (nodoRaiz.getNum() < addNodo.getNum()) {
+
+            if (nodoRaiz.right != null) {
+
+                addNodoRecursivo(nodoRaiz.right, addNodo);
+
+            } else {
+
+                nodoRaiz.right = addNodo;
+                return;
+            }
+
+
         }
+    }
+
+    public Nodo getRoot() {
+        return root;
+    }
+
+    public void setRoot(Nodo root) {
+        this.root = root;
+    }
+
+    @Override
+    public String toString() {
+        return "Tree{" +
+                "root=" + root.getNum() +
+                '}';
     }
 }

@@ -35,4 +35,11 @@ public class Nodo {
     public void setRight(Nodo right) {
         this.right = right;
     }
+
+    @Override
+    public String toString() {
+        return "Nodo{" +
+                "num=" + num +
+                '}';
+    }
 }
