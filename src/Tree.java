@@ -65,10 +65,12 @@ public class Tree {
 
     public void showNodes(Nodo nodo) {
 
-
+        if(nodo==root){
+            System.out.println(root);
+        }
         if (nodo != null) {
 
-            System.out.println(nodo);
+
             showNodesRecursive(nodo.left, nodo.right);
         }
 
@@ -80,16 +82,22 @@ public class Tree {
     public void showNodesRecursive(Nodo leftNodo, Nodo rigthNodo) {
 
 
+
+
         if (leftNodo != null) {
 
-            showNodes(leftNodo);
+            System.out.println(leftNodo);
 
         }
         if (rigthNodo != null) {
+            System.out.println(rigthNodo);
 
-            showNodes(rigthNodo);
 
         }
+
+        showNodes(leftNodo);
+        showNodes(rigthNodo);
+
 
         return;
     }

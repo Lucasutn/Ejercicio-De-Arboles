@@ -9,9 +9,11 @@ public class Main {
     tree.addNodo(1);
     tree.addNodo(3);
     tree.addNodo(5);
-    tree.addNodo(10);
-    tree.addNodo(9);
-    tree.addNodo(11);
+    tree.addNodo(6);
+    tree.addNodo(7);
+
+
+
 
 //        Verificacion ejercicio 1
 //        System.out.println(tree);
